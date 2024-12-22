@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: 
+    "sidebar header" 
+    "sidebar main";
+    height: 100vh;
+    width: 100vw;
+    font-family: montserrat;
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+.sidebar {
+    position: relative;
+    z-index: 11;
+    padding: 10px;
+    grid-area: sidebar;
+    background-color: #155095;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar-small-icons {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 
+        repeat(auto-fill, minmax(10px, 1fr));
+    grid-template-columns: 1fr 3fr;
+    flex-grow: 1;
+}
+
+.header {
+    grid-area: header;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 3px 5px gray;
+}
+
+.main {
+    grid-area: main;
+    background-color: #C4CACE;
+}
+
+.dashboard {
+    display: flex;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.dashboard-icon {
+    background-image: url(icons/view-dashboard.svg);
+    height: 60px;
+    width: 60px;
+    background-repeat: no-repeat;
+}
+
+.icon {
+    background-image: url(icons/view-dashboard.svg);
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+}
+
+.text {
+    color: white;
+    --green: #78BE21;
+}
+
+.search-bar {
+    display: flex;
+    padding: 10px;
+    padding-right: 20px;
+    width: 96%;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.search-bar :hover {
+    opacity: 0.5;
+}
+
+.search-bar div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.search-icon {
+    background-image: url(icons/magnify.svg);
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+}
+
+.actual-search-bar {
+    background-color: #78BE21;
+    height: 40px;
+    width: max(200px, 60%);
+    border-radius: 20px;
+}
+
+.blank-space {
+    width: auto;
+    flex-grow: 1;
+}
+
+.notif-icon {
+    background-image: url(icons/bell.svg);
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+}
+
+.mini-pfp {
+    background-image: url(icons/blitz.jpg);
+    border-radius: 30px;
+    height: 45px;
+    width: 45px;
+    background-size: contain;
+    outline: solid 4px #78BE21;
+}
+
+.user {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.user div {
+    margin: 10px;
+}
+
+.pfp {
+    background-image: url(icons/blitz.jpg);
+    border-radius: 40px;
+    height: 80px;
+    width: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.user-button {
+    background-color: #78BE21;
+    width: 70px;
+    padding: 10px;
+    border-radius: 35px;
+    text-align: center;
+}
+
+.greetings-text {
+    font-size: 12px;
+}
+.user-name-big {
+    font-size: 24px;
+}
