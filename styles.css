@@ -1,165 +1,365 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .container {
-    display: grid;
-    grid-template-rows: 1fr 3fr;
-    grid-template-columns: 1fr 5fr;
-    grid-template-areas: 
-    "sidebar header" 
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+    "sidebar header"
     "sidebar main";
-    height: 100vh;
-    width: 100vw;
-    font-family: montserrat;
+  height: 100vh;
+  width: 100vw;
+  font-family: montserrat;
 }
 
 @font-face {
-    font-family: montserrat;
-    src: url(Montserrat/Montserrat-VariableFont_wght.ttf);
+  font-family: montserrat;
+  src: url(Montserrat/Montserrat-VariableFont_wght.ttf);
 }
 
 .sidebar {
-    position: relative;
-    z-index: 11;
-    padding: 10px;
-    grid-area: sidebar;
-    background-color: #155095;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  position: relative;
+  z-index: 11;
+  grid-area: sidebar;
+  background-color: #155095;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sidebar-small-icons {
-    display: grid;
-    gap: 10px;
-    grid-template-rows: 
-        repeat(auto-fill, minmax(10px, 1fr));
-    grid-template-columns: 1fr 3fr;
-    flex-grow: 1;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+  grid-template-columns: 1fr 3fr;
+  flex-grow: 1;
 }
 
 .header {
-    grid-area: header;
-    position: relative;
-    z-index: 10;
-    box-shadow: 0px 3px 5px gray;
+  grid-area: header;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 3px 5px gray;
 }
 
 .main {
-    grid-area: main;
-    background-color: #C4CACE;
+  grid-area: main;
+  background-color: #c4cace;
 }
 
 .dashboard {
-    display: flex;
-    margin-bottom: 30px;
-    color: white;
+  display: flex;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: white;
 }
 
 .dashboard-icon {
-    background-image: url(icons/view-dashboard.svg);
-    height: 60px;
-    width: 60px;
-    background-repeat: no-repeat;
+  background-image: url(icons/view-dashboard.svg);
+  height: 60px;
+  width: 60px;
+  background-repeat: no-repeat;
 }
 
-.icon {
-    background-image: url(icons/view-dashboard.svg);
-    background-repeat: no-repeat;
-    height: 40px;
-    width: 40px;
-    background-size: contain;
+.home.icon {
+  background-image: url(icons/home-roof.svg);
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  justify-self: right;
+}
+
+.profile.icon {
+  background-image: url(icons/shield-account-outline.svg);
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  justify-self: right;
+}
+
+.messages.icon {
+  background-image: url(icons/message-fast-outline.svg);
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  justify-self: right;
+}
+
+.history.icon {
+  background-image: url(icons/history.svg);
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  justify-self: right;
+}
+
+.tasks.icon {
+  background-image: url(icons/calendar-check-outline.svg);
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  justify-self: right;
+}
+
+.communities.icon {
+  background-image: url(icons/account-group-outline.svg);
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  justify-self: right;
+}
+
+.settings.icon {
+  background-image: url(icons/cog-outline.svg);
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  justify-self: right;
+}
+
+.support.icon {
+  background-image: url(icons/progress-question.svg);
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  justify-self: right;
+}
+
+.privacy.icon {
+  background-image: url(icons/bug-check-outline.svg);
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  justify-self: right;
 }
 
 .text {
-    color: white;
-    --green: #78BE21;
+  color: white;
+  --green: #78be21;
+  justify-self: left;
+  align-self: center;
 }
 
 .search-bar {
-    display: flex;
-    padding: 10px;
-    padding-right: 20px;
-    width: 96%;
-    justify-content: stretch;
-    align-items: center;
+  display: flex;
+  padding: 10px;
+  padding-right: 20px;
+  width: 96%;
+  justify-content: stretch;
+  align-items: center;
 }
 
 .search-bar :hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .search-bar div {
-    margin-left: 10px;
-    margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .search-icon {
-    background-image: url(icons/magnify.svg);
-    height: 40px;
-    width: 40px;
-    background-size: contain;
+  background-image: url(icons/magnify.svg);
+  height: 40px;
+  width: 40px;
+  background-size: contain;
 }
 
 .actual-search-bar {
-    background-color: #78BE21;
-    height: 40px;
-    width: max(200px, 60%);
-    border-radius: 20px;
+  background-color: #78be21;
+  height: 40px;
+  width: max(200px, 60%);
+  border-radius: 20px;
 }
 
 .blank-space {
-    width: auto;
-    flex-grow: 1;
+  width: auto;
+  flex-grow: 1;
 }
 
 .notif-icon {
-    background-image: url(icons/bell.svg);
-    height: 40px;
-    width: 40px;
-    background-size: contain;
+  background-image: url(icons/bell.svg);
+  height: 40px;
+  width: 40px;
+  background-size: contain;
 }
 
 .mini-pfp {
-    background-image: url(icons/blitz.jpg);
-    border-radius: 30px;
-    height: 45px;
-    width: 45px;
-    background-size: contain;
-    outline: solid 4px #78BE21;
+  background-image: url(icons/blitz.jpg);
+  border-radius: 30px;
+  height: 45px;
+  width: 45px;
+  background-size: contain;
+  outline: solid 4px #78be21;
 }
 
 .user {
-    display: flex;
-    padding: 10px;
-    align-items: center;
+  display: flex;
+  padding: 10px;
+  align-items: center;
 }
 
 .user div {
-    margin: 10px;
+  margin: 10px;
 }
 
 .pfp {
-    background-image: url(icons/blitz.jpg);
-    border-radius: 40px;
-    height: 80px;
-    width: 80px;
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-image: url(icons/blitz.jpg);
+  border-radius: 40px;
+  height: 80px;
+  width: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .user-button {
-    background-color: #78BE21;
-    width: 70px;
-    padding: 10px;
-    border-radius: 35px;
-    text-align: center;
+  background-color: #78be21;
+  width: 70px;
+  padding: 10px;
+  border-radius: 35px;
+  text-align: center;
 }
 
 .greetings-text {
-    font-size: 12px;
+  font-size: 14px;
 }
 .user-name-big {
-    font-size: 24px;
+  font-size: 24px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+}
+
+.projects {
+  grid-area: projects;
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+.announcements {
+  grid-area: announcements;
+  margin: 20px;
+  margin-bottom: 0px;
+}
+
+.trending {
+  grid-area: trending;
+  margin: 20px;
+}
+
+.line {
+  background-color: #c4cace;
+  height: 1px;
+  width: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.box {
+  background-color: white;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 3px 3px gray;
+}
+
+.subheading {
+  font-weight: 600;
+}
+
+.text-header {
+  margin: 5px;
+  font-size: 14px;
+}
+
+.text-p {
+  margin: 5px;
+  font-size: 10px;
+}
+
+.friend-user {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  margin: 10px;
+}
+
+.dk-pfp {
+  background-image: url(icons/dk.jpg);
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.geno-pfp {
+  background-image: url(icons/geno.jpg);
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.devon-pfp {
+  background-image: url(icons/devon.jpg);
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.trending > .box {
+  padding: 10px;
+}
+
+.projects-cluster {
+  margin-top: 10px;
+  display: grid;
+  gap: 30px;
+  width: 100%;
+  height: 95%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 3px 3px gray;
+  display: flex;
+}
+
+.bar {
+  background-color: #155095;
+  width: 10px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.project-content {
+  width: calc(100% - 10px);
+  padding: 10px;
 }
